@@ -21,7 +21,7 @@ export default function Home() {
 					))}
 				</ul>
 			</nav>
-      <h1 className="hover z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+      <h1 className="hover z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-7xl whitespace-nowrap bg-clip-text ">
           arush mehrotra
 		  </h1>
       <div className="my-16 text-center">
