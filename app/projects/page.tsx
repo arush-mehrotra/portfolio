@@ -38,7 +38,7 @@ export default function Projects() {
             </div>
         </div>
 
-        <div className="max-w-sm mt-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="max-w-sm mt-4 mb-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <div className="rounded-t-lg">
                 <Image src={Snake} alt="" />
             </div>
