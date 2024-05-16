@@ -1,4 +1,23 @@
+'use client';
+import React, { useState, useEffect } from 'react';
+
 export default function Projects() {
+
+    const [isLargeScreen, setIsLargeScreen] = useState(true);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsLargeScreen(window.innerWidth >= 1024); // 1024px is a typical breakpoint for large screens
+      };
+  
+      handleResize(); // Set the initial value
+      window.addEventListener('resize', handleResize); // Update value on resize
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+  
     const styles = {
       projectsContainer: {
         padding: '2rem',
@@ -71,7 +90,7 @@ export default function Projects() {
               <span style={styles.tag}>POSIX Library</span>
             </div>
           </div>
-          <div style={styles.projectImage}></div> {/* Placeholder for image */}
+          {isLargeScreen && <div style={styles.projectImage}></div>}
         </div>
 
         <div style={styles.project}>
@@ -87,7 +106,7 @@ export default function Projects() {
               <span style={styles.tag}>scikit-learn</span>
             </div>
           </div>
-          <div style={styles.projectImage}></div> {/* Placeholder for image */}
+          {isLargeScreen && <div style={styles.projectImage}></div>}
         </div>
 
         <div style={styles.project}>
@@ -104,7 +123,7 @@ export default function Projects() {
               <span style={styles.tag}>Axios</span>
             </div>
           </div>
-          <div style={styles.projectImage}></div> {/* Placeholder for image */}
+          {isLargeScreen && <div style={styles.projectImage}></div>}
         </div>
         {/* Add more projects here */}
       </div>
