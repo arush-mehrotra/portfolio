@@ -1,59 +1,112 @@
-import Image from 'next/image';
-import FIFA from '../../images/fifa.jpeg';
-import AirBnB from '../../images/airbnb.png';
-import Snake from '../../images/snake.jpeg';
-
 export default function Projects() {
-  return (
-    <div className="flex flex-col items-center justify-center">
-        <div className="max-w-sm mt-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <div className="rounded-t-lg">
-                <Image src={FIFA} alt="" />
+    const styles = {
+      projectsContainer: {
+        padding: '2rem',
+        color: '#e0e0e0',
+      },
+      header: {
+        textAlign: 'left' as const,
+        fontWeight: 'bold' as const,
+        fontSize: '4rem',
+        marginBottom: '3rem',
+      },
+      project: {
+        marginBottom: '3rem',
+        border: '1px solid #333',
+        borderRadius: '10px',
+        padding: '1.5rem',
+        backgroundColor: '#1f1f1f',
+        display: 'flex',
+        flexDirection: 'row' as const,
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      },
+      projectInfo: {
+        flex: 1,
+        marginRight: '1.5rem',
+      },
+      projectImage: {
+        width: '300px',
+        height: '150px',
+        borderRadius: '10px',
+        backgroundColor: '#333',
+      },
+      projectTitle: {
+        fontSize: '1.5rem',
+        marginBottom: '0.5rem',
+      },
+      projectDate: {
+        color: '#888',
+        fontSize: '0.9rem',
+        marginBottom: '1rem',
+      },
+      projectDescription: {
+        marginBottom: '1rem',
+      },
+      projectTags: {
+        display: 'flex',
+        gap: '0.5rem',
+      },
+      tag: {
+        backgroundColor: '#00008b',
+        padding: '0.5rem',
+        borderRadius: '5px',
+        color: '#fff',
+        fontSize: '0.8rem',
+      },
+    };
+  
+    return (
+      <div style={styles.projectsContainer}>
+        <h1 style={styles.header}>Projects</h1>
+        <div style={styles.project}>
+          <div style={styles.projectInfo}>
+            <h2 style={styles.projectTitle}>PennOS</h2>
+            <p style={styles.projectDate}>April - May 2024</p>
+            <p style={styles.projectDescription}>
+            In this project, we successfully built a single-core operating system, with a FAT-based filesystem, a kernel, and a scheduler that correctly decides which processes to run. We have preserved the necessary abstractions between kernel, system, and user land. We have implemented a number of builtin functions that can be run from our shell and interact with the filesystem. We have tested the functionality of the entire system, including the correct CPU utilization and memory leaks using Valgrind.
+            </p>
+            <div style={styles.projectTags}>
+              <span style={styles.tag}>C</span>
+              <span style={styles.tag}>POSIX Library</span>
             </div>
-            <div className="p-5">
-                <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">FIFA Database Application</h5>
-                </a>
-                {/* <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p> */}
-                <a href="https://github.com/kavin1001/FIFA-Database-App" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Read more
-                <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
+          </div>
+          <div style={styles.projectImage}></div> {/* Placeholder for image */}
         </div>
 
-        <div className="max-w-sm mt-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <div className="rounded-t-lg">
-                <Image src={AirBnB} alt="" />
+        <div style={styles.project}>
+          <div style={styles.projectInfo}>
+            <h2 style={styles.projectTitle}>AirBnB Price Prediction Machine Learning Model</h2>
+            <p style={styles.projectDate}>April - May 2023</p>
+            <p style={styles.projectDescription}>
+            In this project, we aimed to better understand the drivers of price for various Airbnb listings in New York City in 2019. We selected three datasets to achieve this goal. The first dataset, airbnb_ddf, contains information on price, geographical location, neighborhood, room type, reviews, and other features of Airbnb listings. The second dataset, crime_ddf, provides detailed records of various crimes committed across New York City, including their classification (felony, misdemeanor, or violation) and geographical location. The third dataset, income_df, offers data on the median household income for each of New York's 200+ neighborhoods, adding complexity to our analysis. By aggregating these datasets and merging them, we developed a comprehensive understanding of both intrinsic factors (e.g., room type, reviews) and external factors (e.g., crime levels, income) that influence Airbnb listing prices.
+            </p>
+            <div style={styles.projectTags}>
+              <span style={styles.tag}>Pandas</span>
+              <span style={styles.tag}>PyTorch</span>
+              <span style={styles.tag}>scikit-learn</span>
             </div>
-            <div className="p-5">
-                <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">AirBnB Price Prediction Model</h5>
-                </a>
-                {/* <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p> */}
-                <a href="https://nbviewer.org/github/arush-mehrotra/AirBnB-Price-Prediction-Model/blob/main/AirBnB_Price_Prediction.ipynb " className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Read more
-                <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
+          </div>
+          <div style={styles.projectImage}></div> {/* Placeholder for image */}
         </div>
 
-        <div className="max-w-sm mt-4 mb-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <div className="rounded-t-lg">
-                <Image src={Snake} alt="" />
+        <div style={styles.project}>
+          <div style={styles.projectInfo}>
+            <h2 style={styles.projectTitle}>FIFA Database Application</h2>
+            <p style={styles.projectDate}>April - May 2023</p>
+            <p style={styles.projectDescription}>
+            In this project, we successfully developed a comprehensive web application for analyzing and comparing football players and teams across various leagues and seasons. The application allows users to track the yearly progression of individual players' attributes, such as overall rating, shooting, and dribbling, and compare multiple players and teams across these attributes. Users can filter and search for specific players and teams, with visualization features like graphs and charts to enhance comparisons. 
+            </p>
+            <div style={styles.projectTags}>
+              <span style={styles.tag}>ReactJS</span>
+              <span style={styles.tag}>AWS RDS</span>
+              <span style={styles.tag}>Auth0</span>
+              <span style={styles.tag}>Axios</span>
             </div>
-            <div className="p-5">
-                <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Snake Game</h5>
-                </a>
-                {/* <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p> */}
-                <a href="https://github.com/arush-mehrotra/CIS_120_Final_Project" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Read more
-                <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
+          </div>
+          <div style={styles.projectImage}></div> {/* Placeholder for image */}
         </div>
-    </div> 
-    
-  )
-}
+        {/* Add more projects here */}
+      </div>
+    );
+  }
