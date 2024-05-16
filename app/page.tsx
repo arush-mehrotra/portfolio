@@ -30,7 +30,7 @@ export default function Home() {
 					computer science  •  university of pennsylvania 
         </h2>
       </div>
-	  <div className="w-2/3 text-center">
+	  <div className="w-2/3 text-center mb-5">
         <p className="text-l sm:text-s md:text-m lg:text-l text-gray-500 ">
 		I am a rising senior pursuing a BSE and MSE in Computer & Information Science at the University of Pennsylvania. I am passionate about exploring ways to use technology as a force for social good. Specifically, I recognize the structural inequities that permeate the criminal justice system and want to develop human-centered technology leveraging machine learning to address these disparities. This summer, I will be working at Viam as a software engineering intern on their Data & Machine Learning team.
         </p>
