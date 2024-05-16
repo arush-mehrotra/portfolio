@@ -1,5 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import FIFA from '../../images/fifa.jpeg';
+import AIRBNB from '../../images/airbnb.png';
+import LINUX from '../../images/linux.png';
 
 export default function Projects() {
 
@@ -90,7 +94,15 @@ export default function Projects() {
               <span style={styles.tag}>POSIX Library</span>
             </div>
           </div>
-          {isLargeScreen && <div style={styles.projectImage}></div>}
+          {isLargeScreen && (
+          <Image
+            src={LINUX}
+            alt="Project Image"
+            width={300}
+            height={150}
+            className="rounded-lg"
+          />
+        )}
         </div>
 
         <div style={styles.project}>
@@ -106,7 +118,15 @@ export default function Projects() {
               <span style={styles.tag}>scikit-learn</span>
             </div>
           </div>
-          {isLargeScreen && <div style={styles.projectImage}></div>}
+          {isLargeScreen && (
+          <Image
+            src={AIRBNB}
+            alt="Project Image"
+            width={300}
+            height={150}
+            className="rounded-lg"
+          />
+        )}
         </div>
 
         <div style={styles.project}>
@@ -123,7 +143,15 @@ export default function Projects() {
               <span style={styles.tag}>Axios</span>
             </div>
           </div>
-          {isLargeScreen && <div style={styles.projectImage}></div>}
+          {isLargeScreen && (
+          <Image
+            src={FIFA}
+            alt="Project Image"
+            width={300}
+            height={150}
+            className="rounded-lg"
+          />
+        )}
         </div>
         {/* Add more projects here */}
       </div>

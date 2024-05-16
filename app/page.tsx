@@ -28,9 +28,10 @@ export default function Home() {
 				<Image
 					src={profilePic}
 					alt="Profile"
-					width={128}
-					height={128}
+					width={160}
+					height={160}
 					className="rounded-full object-cover border-4 border-gray-500"
+					style={{ maxWidth: '10rem', maxHeight: '10rem' }}
 				/>
        	     </div>
       <h1 className="hover z-10 text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-7xl whitespace-nowrap bg-clip-text ">
