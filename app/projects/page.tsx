@@ -114,7 +114,7 @@ export default function Projects() {
             <p style={styles.projectDescription}>
             In collaboration with Partners for Justice, a national nonprofit organization dedicated to transforming the legal system, I developed a tool that automates data analysis for advocate databases stored in Airtable. This tool addresses the challenges of manual data analysis and repetitive tasks across multiple databases as the number of advocate offices grows.
 
-Using the Airtable API, the tool pulls data from specified databases and performs queries to calculate key insights, such as the number of cases opened and the comparison between entered and provided service goals. Users can specify date ranges for targeted analysis, reducing a process that once took days to just minutes. This tool significantly enhances efficiency and accuracy in data reporting and analysis, supporting Partners for Justice's mission to save clients from incarceration and connect them with vital social services.
+Using the Airtable API, the tool pulls data from specified databases and performs queries to calculate key insights, such as the number of cases opened and the comparison between entered and provided service goals. Users can specify date ranges for targeted analysis, reducing a process that once took days to just minutes. This tool significantly enhances efficiency and accuracy in data reporting and analysis, supporting Partners for Justice&apos;s mission to save clients from incarceration and connect them with vital social services.
             </p>
             <div style={styles.projectTags}>
               <span style={styles.tag}>Pandas</span>
