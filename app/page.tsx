@@ -22,18 +22,20 @@ const Navigation = React.memo(() => (
     <Link href="/" className="text-lg underline mb-2 md:mb-0">
       Arush Mehrotra
     </Link>
-    <ul className="flex flex-wrap items-center space-x-6">
-      {navigation.map((item) => (
-        <li key={item.name}>
-          <Link
-            href={item.href}
-            className="text-lg text-gray-700 hover:text-black underline transition duration-300"
-          >
-            {item.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
+	<ul className="flex flex-wrap items-center space-x-6">
+		{navigation.map((item) => (
+			<li key={item.name}>
+			<Link
+				href={item.href}
+				className="text-lg text-gray-700 hover:text-black underline transition duration-300"
+				target={item.name === "Resume" ? "_blank" : undefined}
+				rel={item.name === "Resume" ? "noopener noreferrer" : undefined}
+			>
+				{item.name}
+			</Link>
+			</li>
+		))}
+	</ul>
   </nav>
 ));
 Navigation.displayName = "Navigation";
