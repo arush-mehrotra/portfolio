@@ -64,7 +64,6 @@ export default function Projects() {
         <Link href="/" className="text-lg underline mb-2 md:mb-0">
           Arush Mehrotra
         </Link>
-        {/* Navigation Links */}
         <ul className="flex flex-wrap items-center space-x-6">
           {navigation.map((item) => (
             <li key={item.name}>
@@ -79,14 +78,12 @@ export default function Projects() {
         </ul>
       </nav>
 
-      {/* Projects Section */}
-      <div className="space-y-16">
+      <div className="w-7/8 space-y-16">
         {projects.map((project, index) => (
           <div
             key={index}
             className="flex flex-col md:flex-row items-center md:items-start md:space-x-8 space-y-8 md:space-y-0 border border-gray-300 rounded-lg p-8 bg-gray-100 shadow-lg"
           >
-            {/* Project Image */}
             <div className="flex-shrink-0 w-full md:w-64 h-40 relative">
               <Image
                 src={project.image}
@@ -96,7 +93,6 @@ export default function Projects() {
               />
             </div>
 
-            {/* Project Info */}
             <div className="flex-1 space-y-4">
               <h2 className="text-2xl font-semibold">{project.title}</h2>
               <p className="text-sm text-gray-500">{project.date}</p>
