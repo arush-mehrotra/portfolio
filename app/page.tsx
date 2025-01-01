@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import React from 'react';
 
 const navigation = [
   { name: "Projects", href: "/projects" },
@@ -16,32 +17,38 @@ const descriptionText = `
   intern on their Data & Machine Learning team.
 `;
 
-function Navigation() {
-  return (
-    <nav className="flex flex-wrap items-center justify-between mb-8">
-      <Link href="/" className="text-lg underline mb-2 md:mb-0">
-        Arush Mehrotra
-      </Link>
-      <ul className="flex flex-wrap items-center space-x-6">
-        {navigation.map((item) => (
-          <li key={item.name}>
-            <Link
-              href={item.href}
-              className="text-lg text-gray-700 hover:text-black underline transition duration-300"
-            >
-              {item.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-}
+const Navigation = React.memo(() => (
+  <nav className="flex flex-wrap items-center justify-between mb-8">
+    <Link href="/" className="text-lg underline mb-2 md:mb-0">
+      Arush Mehrotra
+    </Link>
+    <ul className="flex flex-wrap items-center space-x-6">
+      {navigation.map((item) => (
+        <li key={item.name}>
+          <Link
+            href={item.href}
+            className="text-lg text-gray-700 hover:text-black underline transition duration-300"
+          >
+            {item.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </nav>
+));
+Navigation.displayName = "Navigation";
 
 export default function Home() {
   const [typedText, setTypedText] = useState("");
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isHydrated) return;
+
     let index = 0;
     const typingInterval = setInterval(() => {
       if (index < descriptionText.length - 1) {
@@ -51,8 +58,9 @@ export default function Home() {
         clearInterval(typingInterval);
       }
     }, 20);
+
     return () => clearInterval(typingInterval);
-  }, []);
+  }, [isHydrated]);
 
   return (
     <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-8">
