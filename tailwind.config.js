@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -8,9 +7,19 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'], 
+        sans: ['Montserrat', 'sans-serif'], 
       },
+      animation: {
+        typewriter: "typewriter 2s steps(18) forwards"
+      },
+      keyframes: {
+        typewriter: {
+          to: {
+            left: "100%"
+          }
+        }
+      }
     },
   },
   plugins: [],
-}
+};

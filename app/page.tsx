@@ -41,7 +41,6 @@ const Navigation = React.memo(() => (
 Navigation.displayName = "Navigation";
 
 export default function Home() {
-  const [typedText, setTypedText] = useState("");
   const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
@@ -50,21 +49,6 @@ export default function Home() {
 
   useEffect(() => {
     if (!isHydrated) return;
-
-    // Reset state when component mounts or remounts
-    setTypedText("");
-    let index = 0;
-
-    const typingInterval = setInterval(() => {
-      if (index < descriptionText.length - 1) {
-        setTypedText((prev) => prev + descriptionText[index]);
-        index++;
-      } else {
-        clearInterval(typingInterval);
-      }
-    }, 20);
-
-    return () => clearInterval(typingInterval);
   }, [isHydrated]);
 
   return (
@@ -72,8 +56,12 @@ export default function Home() {
       <Navigation />
 
       <div className="w-7/8 sm:w-1/2 space-y-6">
-        <h2 className="text-2xl sm:text-xl font-semibold">Hello!</h2>
-        <p className="text-sm">{typedText}</p>
+	  	<h1 className="relative w-[max-content] font-semibold before:absolute before:inset-0 before:bg-white before:animate-typewriter">
+			Hello, I am Arush!
+		</h1>
+		<p className="text-sm break-words">
+			{descriptionText}
+		</p>
         <p className="mt-4">
           <a
             href="mailto:arushm@seas.upenn.edu"
