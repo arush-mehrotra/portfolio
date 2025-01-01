@@ -59,7 +59,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-white text-black px-6 md:px-16 py-8">
+    <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-8">
       <nav className="flex flex-wrap items-center justify-between mb-8">
         <Link href="/" className="text-lg underline mb-2 md:mb-0">
           Arush Mehrotra
