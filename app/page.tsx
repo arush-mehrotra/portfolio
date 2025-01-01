@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -16,13 +16,35 @@ const descriptionText = `
   intern on their Data & Machine Learning team.
 `;
 
+function Navigation() {
+  return (
+    <nav className="flex flex-wrap items-center justify-between mb-8">
+      <Link href="/" className="text-lg underline mb-2 md:mb-0">
+        Arush Mehrotra
+      </Link>
+      <ul className="flex flex-wrap items-center space-x-6">
+        {navigation.map((item) => (
+          <li key={item.name}>
+            <Link
+              href={item.href}
+              className="text-lg text-gray-700 hover:text-black underline transition duration-300"
+            >
+              {item.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
 export default function Home() {
   const [typedText, setTypedText] = useState("");
 
   useEffect(() => {
     let index = 0;
     const typingInterval = setInterval(() => {
-      if (index < descriptionText.length - 1) {
+      if (index < descriptionText.length) {
         setTypedText((prev) => prev + descriptionText[index]);
         index++;
       } else {
@@ -34,23 +56,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-8">
-      <nav className="flex flex-wrap items-center justify-between mb-8">
-        <Link href="/" className="text-lg underline mb-2 md:mb-0">
-          Arush Mehrotra
-        </Link>
-        <ul className="flex flex-wrap items-center space-x-6">
-          {navigation.map((item) => (
-            <li key={item.name}>
-              <Link
-                href={item.href}
-                className="text-lg text-gray-700 hover:text-black underline transition duration-300"
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <Navigation />
 
       <div className="w-7/8 sm:w-1/2 space-y-6">
         <h2 className="text-2xl sm:text-xl font-semibold">Hello!</h2>
