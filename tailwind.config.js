@@ -10,7 +10,7 @@ module.exports = {
         sans: ['Montserrat', 'sans-serif'], 
       },
       animation: {
-        typewriter: "typewriter 2s steps(18) forwards"
+        typewriter: "typewriter 1s steps(18) forwards"
       },
       keyframes: {
         typewriter: {
