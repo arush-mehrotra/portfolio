@@ -52,7 +52,7 @@ export default function Home() {
         </ul>
       </nav>
 
-      <div className="w-3/4 sm:w-1/2 space-y-6">
+      <div className="w-7/8 sm:w-1/2 space-y-6">
         <h2 className="text-2xl sm:text-xl font-semibold">Hello!</h2>
         <p className="text-sm">{typedText}</p>
         <p className="mt-4">
