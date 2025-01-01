@@ -9,7 +9,7 @@ import PFJ from '../../images/pfj.png';
 import CC from '../../images/CC.png';
 
 const navigation = [
-  { name: 'Home', href: '/' },
+  { name: 'Projects', href: '/projects' },
   { name: 'Contact', href: '/contact' },
   { name: 'Resume', href: '/resume.pdf' },
 ];
@@ -63,7 +63,7 @@ export default function Projects() {
       {/* Navigation */}
       <nav className="flex flex-wrap items-center justify-between mb-8">
         {/* Logo/Name */}
-        <Link href="/" className="text-lg font-semibold underline mb-2 md:mb-0">
+        <Link href="/" className="text-lg underline mb-2 md:mb-0">
           Arush Mehrotra
         </Link>
         {/* Navigation Links */}
