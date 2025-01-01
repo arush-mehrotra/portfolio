@@ -44,7 +44,7 @@ export default function Home() {
   useEffect(() => {
     let index = 0;
     const typingInterval = setInterval(() => {
-      if (index < descriptionText.length) {
+      if (index < descriptionText.length - 1) {
         setTypedText((prev) => prev + descriptionText[index]);
         index++;
       } else {
