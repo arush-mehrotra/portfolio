@@ -7,6 +7,7 @@ import AIRBNB from '../../images/airbnb.png';
 import LINUX from '../../images/linux.png';
 import PFJ from '../../images/pfj.png';
 import CC from '../../images/CC.png';
+import NUMBERLINK from '../../images/numberlink.png';
 
 const navigation = [
   { name: 'Projects', href: '/projects' },
@@ -15,6 +16,14 @@ const navigation = [
 ];
 
 const projects = [
+  {
+    title: 'Numberlink Solver',
+    date: 'Sep - Dec 2024',
+    description:
+    'In this project, we built an interactive Numberlink puzzle platform with a React frontend and FastAPI backend. The platform allows users to generate puzzles, solve them using various algorithms (Constraint Programming, SAT solvers), and create custom puzzles. We developed three puzzle generators and experimented with three solver implementations, benchmarking their performance and clause generation. The PycoEdgeSolver emerged as the most efficient and scalable solution, solving puzzles up to 10x10 grids within time limits and with fewer clauses compared to other solvers. This project highlights the interplay between algorithm design, computational complexity, and user experience in a gamified setting.',
+    tags: ['FastAPI', 'Constraint Programming', 'SAT Solvers', 'Python'],
+    image: NUMBERLINK,
+  },
   {
     title: 'PennOS',
     date: 'April - May 2024',
