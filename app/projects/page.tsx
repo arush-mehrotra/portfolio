@@ -93,7 +93,7 @@ export default function Projects() {
 
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl font-light mb-4 montserrat">Project Portfolio</h1>
-        <p className="text-lg font-mono mb-16">What I've been up to recently</p>
+        <p className="text-lg font-mono mb-16">What I&apos;ve been up to recently</p>
 
         <div className="space-y-24">
           {projects.map((project, index) => (
