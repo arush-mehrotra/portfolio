@@ -1,7 +1,7 @@
 import './globals.css'
-import { Montserrat } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'], // Include the weights you want
 })
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }

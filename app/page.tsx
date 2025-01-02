@@ -32,19 +32,19 @@ const socialLinks = [
 const words = [
     {
       text: "Building",
-	  className: "text-xl sm:text-4xl montserrat"
+	  className: "text-xl sm:text-4xl inter"
     },
     {
       text: "human",
-	  className: "text-xl lg:text-4xl montserrat"
+	  className: "text-xl lg:text-4xl inter"
     },
     {
       text: "centered",
-	  className: "text-xl lg:text-4xl montserrat"
+	  className: "text-xl lg:text-4xl inter"
     },
     {	
       text: "technology",
-	  className: "text-xl lg:text-4xl montserrat"
+	  className: "text-xl lg:text-4xl inter"
     },
   ];
 
@@ -68,7 +68,7 @@ const topics = [
 
 const Navigation = React.memo(() => (
   <nav className="flex items-center justify-between mb-16">
-    <Link href="/" className="text-3xl font-light tracking-tight hover:text-gray-600 transition-colors montserrat">
+    <Link href="/" className="text-3xl font-light tracking-tight hover:text-gray-600 transition-colors inter">
       Arush Mehrotra
     </Link>
     <div className="flex items-center gap-6">
@@ -76,7 +76,7 @@ const Navigation = React.memo(() => (
         <Link
           key={item.name}
           href={item.href}
-          className="text-lg font-light hover:text-gray-600 transition-colors montserrat"
+          className="text-lg font-light hover:text-gray-600 transition-colors inter"
         >
           {item.name}
         </Link>
@@ -106,7 +106,7 @@ export default function Home() {
         </section>
 
         <section>
-          <h2 className="text-base uppercase tracking-wide font-light mb-8 montserrat">Topics</h2>
+          <h2 className="text-base uppercase tracking-wide font-light mb-8 inter">Topics</h2>
           <div className="flex flex-wrap gap-3">
             {topics.map((topic) => (
               <Link
@@ -122,7 +122,7 @@ export default function Home() {
         </section>
 
         <section>
-          <h2 className="text-base uppercase tracking-wide font-light mb-8 montserrat">Contact</h2>
+          <h2 className="text-base uppercase tracking-wide font-light mb-8 inter">Contact</h2>
           <div className="space-y-4">
             <a
               href="mailto:arushm@seas.upenn.edu"

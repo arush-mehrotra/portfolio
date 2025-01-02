@@ -75,7 +75,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-8">
       <nav className="flex items-center justify-between mb-16">
-        <Link href="/" className="text-3xl font-light tracking-tight hover:text-gray-600 transition-colors montserrat">
+        <Link href="/" className="text-3xl font-light tracking-tight hover:text-gray-600 transition-colors inter">
           Arush Mehrotra
         </Link>
         <div className="flex items-center gap-6">
@@ -83,7 +83,7 @@ export default function Projects() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-lg font-light hover:text-gray-600 transition-colors montserrat"
+              className="text-lg font-light hover:text-gray-600 transition-colors inter"
             >
               {item.name}
             </Link>
@@ -92,7 +92,7 @@ export default function Projects() {
       </nav>
 
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-5xl font-light mb-4 montserrat">Project Portfolio</h1>
+        <h1 className="text-5xl font-light mb-4 inter">Project Portfolio</h1>
         <p className="text-lg font-mono mb-16">What I&apos;ve been up to recently</p>
 
         <div className="space-y-24">
@@ -108,7 +108,7 @@ export default function Projects() {
                 />
               </div>
               <div className="space-y-4">
-                <h2 className="text-2xl font-light montserrat">{project.title}</h2>
+                <h2 className="text-2xl font-light inter">{project.title}</h2>
                 <div className="flex items-center gap-4 text-gray-500 font-mono">
                   <span>{project.date}</span>
                 </div>

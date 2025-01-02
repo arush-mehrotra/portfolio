@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 body {
   font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
@@ -11,8 +11,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.montserrat {
-  font-family: 'Montserrat', sans-serif;
+.inter {
+  font-family: 'Inter', sans-serif;
 }
 
 .font-mono {
@@ -60,4 +60,3 @@ body {
     padding-right: 5%;
   }
 }
-
