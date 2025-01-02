@@ -91,8 +91,8 @@ export default function Projects() {
         </div>
       </nav>
 
-      <div className="max-w-5xl mx-auto">
-        <h1 className="text-5xl font-light mb-4 inter">Project Portfolio</h1>
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl mb-4 inter">Project Portfolio</h1>
         <p className="text-lg font-mono mb-16">What I&apos;ve been up to recently</p>
 
         <div className="space-y-24">

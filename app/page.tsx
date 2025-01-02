@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import React from 'react';
-
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 import { TypewriterEffectSmooth } from "./components/ui/typewriter-effect";
@@ -32,21 +31,45 @@ const socialLinks = [
 const words = [
     {
       text: "Building",
-	  className: "text-xl sm:text-4xl inter"
+      className: "inter"
     },
     {
       text: "human",
-	  className: "text-xl lg:text-4xl inter"
+      className: "inter"
     },
     {
       text: "centered",
-	  className: "text-xl lg:text-4xl inter"
+      className: "inter"
     },
-    {	
+    {  
       text: "technology",
-	  className: "text-xl lg:text-4xl inter"
+      className: "inter"
     },
-  ];
+];
+
+const workExperience = [
+	{
+	  company: "Viam",
+	  position: "Software Engineer | Data & ML",
+	  type: "Internship",
+	  date: "May 2024 - Aug 2024",
+	  description: "Developed a new data collection paradigm linking ML model outputs with edge device captures using Go, Svelte, and Python. Led a cloud migration of 70M customer files from Amazon S3 to Azure Append Blob, boosting query performance 10x.",
+	},
+	{
+	  company: "Fletch AI",
+	  position: "Software Engineer",
+	  type: "Internship",
+	  date: "June 2023 - Aug 2023",
+	  description: "Enhanced a React-based UX for 100+ trial clients, increasing engagement. Built Jest testing frameworks for code quality. Created and optimized Go API endpoints for efficient data retrieval and updates.",
+	},
+	{
+	  company: "Fidelity Investments",
+	  position: "Full-Stack Software Engineer",
+	  type: "Internship",
+	  date: "June 2022 - Aug 2022",
+	  description: "Built CI/CD pipelines with Jenkins and Docker, enabling test automation for 250+ engineers. Developed dashboards with Node.js and Angular to log and analyze DevOps workflows. Automated tests using Selenium and Java.",
+	},
+  ];  
 
 const descriptionText = `
   I am a senior pursuing a BSE and MSE in Computer & Information Science at the University of Pennsylvania. 
@@ -97,16 +120,42 @@ export default function Home() {
     <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-8 transition-colors">
       <Navigation />
 
-      <div className="space-y-16 max-w-3xl mx-auto">
+      <div className="space-y-16 max-w-4xl mx-auto">
         <section>
           <article className="space-y-2">
-		  	<TypewriterEffectSmooth words={words} />
-            <p className="text-base mt-8C font-light leading-relaxed text-gray-600 font-mono">{descriptionText}</p>
+            <TypewriterEffectSmooth words={words} />
+            <p className="text-base mt-8 font-light leading-relaxed text-gray-600 font-mono">{descriptionText}</p>
           </article>
         </section>
 
+		<section>
+			<h2 className="text-xl uppercase tracking-wide font-light mb-8 inter">Work Experience</h2>
+			<div className="space-y-12">
+				{workExperience.map((work, index) => (
+				<div key={index} className="space-y-2">
+					<div className="flex justify-between items-start">
+					<div>
+						<div className="flex items-center space-x-3">
+						<h3 className="text-xl font-light inter">{work.company}</h3>
+						{work.type && (
+							<span className="inline-block px-2 py-1 text-sm bg-gray-100 rounded-md font-mono">
+							{work.type}
+							</span>
+						)}
+						</div>
+						<p className="text-base font-light inter mt-1">{work.position}</p>
+					</div>
+					<p className="text-gray-500 font-mono">{work.date}</p>
+					</div>
+					<p className="font-mono text-gray-600 leading-relaxed">{work.description}</p>
+				</div>
+				))}
+			</div>
+		</section>
+
+
         <section>
-          <h2 className="text-base uppercase tracking-wide font-light mb-8 inter">Topics</h2>
+          <h2 className="text-xl uppercase tracking-wide font-light mb-8 inter">Topics</h2>
           <div className="flex flex-wrap gap-3">
             {topics.map((topic) => (
               <p
@@ -121,7 +170,7 @@ export default function Home() {
         </section>
 
         <section>
-          <h2 className="text-base uppercase tracking-wide font-light mb-8 inter">Contact</h2>
+          <h2 className="text-xl uppercase tracking-wide font-light mb-8 inter">Contact</h2>
           <div className="space-y-4">
             <a
               href="mailto:arushm@seas.upenn.edu"
