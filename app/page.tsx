@@ -1,9 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import React from 'react';
+
+import { useState, useEffect } from 'react';
 import { Github, Linkedin, Twitter } from 'lucide-react';
+import { TypewriterEffectSmooth } from "./components/ui/typewriter-effect";
 
 const navigation = [
   { name: "Projects", href: "/projects" },
@@ -26,6 +28,25 @@ const socialLinks = [
     label: "X (Twitter) Profile" 
   },
 ];
+
+const words = [
+    {
+      text: "Building",
+	  className: "text-xl sm:text-4xl montserrat"
+    },
+    {
+      text: "human",
+	  className: "text-xl lg:text-4xl montserrat"
+    },
+    {
+      text: "centered",
+	  className: "text-xl lg:text-4xl montserrat"
+    },
+    {	
+      text: "technology",
+	  className: "text-xl lg:text-4xl montserrat"
+    },
+  ];
 
 const descriptionText = `
   I am a senior pursuing a BSE and MSE in Computer & Information Science at the University of Pennsylvania. 
@@ -79,10 +100,8 @@ export default function Home() {
       <div className="space-y-16 max-w-3xl mx-auto">
         <section>
           <article className="space-y-2">
-            <h3 className="text-4xl font-light tracking-tight montserrat">
-                Building human-centered technology
-            </h3>
-            <p className="text-base font-light leading-relaxed text-gray-600 font-mono">{descriptionText}</p>
+		  	<TypewriterEffectSmooth words={words} />
+            <p className="text-base mt-8C font-light leading-relaxed text-gray-600 font-mono">{descriptionText}</p>
           </article>
         </section>
 
