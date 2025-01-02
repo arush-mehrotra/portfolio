@@ -2,38 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.hover {
-  --s: 0.1em; 
-  --c: #CCCCCC; 
-  
-  color: #0000;
-  padding-bottom: var(--s);
-  background: 
-    linear-gradient(90deg,var(--c) 50%,#FFF 0) calc(100% - var(--_p,0%))/200% 100%,
-    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
-  -webkit-background-clip: text,padding-box;
-          background-clip: text,padding-box;
-  transition: 0.5s;
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
 }
-.hover:hover {
-  --_p: 100%
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+.animate-typewriter {
+  position: relative;
+}
+
+.animate-typewriter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  animation: typewriter 1s steps(18) forwards;
+}
+
+@media (max-width: 1920px) {
+  .px-\[805px\] {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .px-\[805px\] {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .px-\[805px\] {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+

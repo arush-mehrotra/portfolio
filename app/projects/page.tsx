@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -6,61 +7,65 @@ import FIFA from '../../images/fifa.jpeg';
 import AIRBNB from '../../images/airbnb.png';
 import LINUX from '../../images/linux.png';
 import PFJ from '../../images/pfj.png';
-import CC from '../../images/CC.png';
+import CC from '../../images/cc.png';
 import NUMBERLINK from '../../images/numberlink.png';
 
 const navigation = [
-  { name: 'Projects', href: '/projects' },
-  { name: 'Contact', href: '/contact' },
-  { name: 'Resume', href: '/resume.pdf' },
+  { name: "Project", href: "/projects" },
 ];
 
 const projects = [
   {
     title: 'Numberlink Solver',
     date: 'Sep - Dec 2024',
+    readTime: '2-3 mins',
     description:
-    'In this project, we built an interactive Numberlink puzzle platform with a React frontend and FastAPI backend. The platform allows users to generate puzzles, solve them using various algorithms (Constraint Programming, SAT solvers), and create custom puzzles. We developed three puzzle generators and experimented with three solver implementations, benchmarking their performance and clause generation. The PycoEdgeSolver emerged as the most efficient and scalable solution, solving puzzles up to 10x10 grids within time limits and with fewer clauses compared to other solvers. This project highlights the interplay between algorithm design, computational complexity, and user experience in a gamified setting.',
+      'Built an interactive Numberlink puzzle platform with a React frontend and FastAPI backend. Users can generate, solve, and create custom puzzles. Developed three generators, tested three solvers, and benchmarked performance. The PycoEdgeSolver emerged as the most scalable, solving puzzles up to 10x10 grids efficiently.',
     tags: ['FastAPI', 'Constraint Programming', 'SAT Solvers', 'Python'],
     image: NUMBERLINK,
   },
   {
     title: 'PennOS',
     date: 'April - May 2024',
+    readTime: '1-2 mins',
     description:
-      'In this project, we successfully built a single-core operating system, with a FAT-based filesystem, a kernel, and a scheduler that correctly decides which processes to run. We have preserved the necessary abstractions between kernel, system, and user land. We have implemented a number of builtin functions that can be run from our shell and interact with the filesystem. We have tested the functionality of the entire system, including the correct CPU utilization and memory leaks using Valgrind.',
+      'Developed a single-core operating system with a FAT-based filesystem, kernel, and scheduler. Implemented built-in functions and tested CPU utilization and memory leaks using Valgrind.',
     tags: ['C', 'POSIX Library'],
     image: LINUX,
   },
   {
     title: 'Partners for Justice',
     date: 'Feb - May 2024',
+    readTime: '2-3 mins',
     description:
-      `In collaboration with Partners for Justice, a national nonprofit organization dedicated to transforming the legal system, I developed a tool that automates data analysis for advocate databases stored in Airtable. This tool addresses the challenges of manual data analysis and repetitive tasks across multiple databases as the number of advocate offices grows. Using the Airtable API, the tool pulls data from specified databases and performs queries to calculate key insights, such as the number of cases opened and the comparison between entered and provided service goals. Users can specify date ranges for targeted analysis, reducing a process that once took days to just minutes. This tool significantly enhances efficiency and accuracy in data reporting and analysis, supporting Partners for Justice's mission to save clients from incarceration and connect them with vital social services.`,
+      'Created a tool to automate data analysis for advocate databases in Airtable. It calculates key metrics, reducing manual work from days to minutes, supporting Partners for Justice’s mission to reform the legal system.',
     tags: ['Pandas', 'Airtable', 'Python'],
     image: PFJ,
   },
   {
     title: 'AirBnB Price Prediction',
     date: 'April - May 2023',
+    readTime: '2-3 mins',
     description:
-      'In this project, we aimed to better understand the drivers of price for various Airbnb listings in New York City in 2019. We selected three datasets to achieve this goal. The first dataset, airbnb_ddf, contains information on price, geographical location, neighborhood, room type, reviews, and other features of Airbnb listings. The second dataset, crime_ddf, provides detailed records of various crimes committed across New York City, including their classification (felony, misdemeanor, or violation) and geographical location. The third dataset, income_df, offers data on the median household income for each of 200+ neighborhoods, adding complexity to our analysis. By aggregating these datasets and merging them, we developed a comprehensive understanding of both intrinsic factors (e.g., room type, reviews) and external factors (e.g., crime levels, income) that influence Airbnb listing prices.',
+      'Analyzed drivers of Airbnb prices in NYC using datasets on listings, crime, and income. Aggregated and merged data to understand intrinsic (e.g., room type) and external (e.g., crime rates) factors influencing pricing.',
     tags: ['Pandas', 'PyTorch', 'scikit-learn'],
     image: AIRBNB,
   },
   {
     title: 'FIFA Database Application',
     date: 'April - May 2023',
+    readTime: '1-2 mins',
     description:
-      'In this project, we successfully developed a comprehensive web application for analyzing and comparing football players and teams across various leagues and seasons. The application allows users to track the yearly progression of individual attributes, such as overall rating, shooting, and dribbling, and compare multiple players and teams across these attributes. Users can filter and search for specific players and teams, with visualization features like graphs and charts to enhance comparisons.',
+      'Built a web app to analyze football players and teams across leagues and seasons. Features include attribute tracking, filtering, and visual comparisons via graphs and charts.',
     tags: ['ReactJS', 'AWS RDS', 'Auth0', 'Axios'],
     image: FIFA,
   },
   {
     title: 'CommonCents Web Application',
     date: 'Sep - Dec 2021',
+    readTime: '2-3 mins',
     description:
-      'In collaboration with Penn Spark, we developed CommonCents, a gamified edtech platform designed to empower students with the knowledge to manage their money and achieve financial independence. This platform aims to make personal finance learning innovative, interesting, and inclusive for a diverse audience, ranging from high school students to undergraduates. As a team of four developers, we drove the application from development to deployment. CommonCents now attracts over 2000 monthly visits across 8 campuses and serves 1600 students.',
+      'Developed a gamified edtech platform for teaching personal finance. CommonCents serves 1600+ students across 8 campuses, attracting 2000+ monthly visits.',
     tags: ['ReactJS', 'Node', 'Express', 'MongoDB'],
     image: CC,
   },
@@ -69,57 +74,59 @@ const projects = [
 export default function Projects() {
   return (
     <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-8">
-      <nav className="flex flex-wrap items-center justify-between mb-8">
-        <Link href="/" className="text-lg underline mb-2 md:mb-0">
+      <nav className="flex items-center justify-between mb-16">
+        <Link href="/" className="text-3xl font-light tracking-tight hover:text-gray-600 transition-colors montserrat">
           Arush Mehrotra
         </Link>
-        <ul className="flex flex-wrap items-center space-x-6">
+        <div className="flex items-center gap-6">
           {navigation.map((item) => (
-            <li key={item.name}>
-              <Link
-                href={item.href}
-                className="text-lg text-gray-700 hover:text-black underline transition duration-300"
-              >
-                {item.name}
-              </Link>
-            </li>
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-lg font-light hover:text-gray-600 transition-colors montserrat"
+            >
+              {item.name}
+            </Link>
           ))}
-        </ul>
+        </div>
       </nav>
 
-      <div className="w-7/8 space-y-16">
-        {projects.map((project, index) => (
-          <div
-          key={index}
-          className="flex flex-col md:flex-row items-center md:space-x-8 space-y-8 md:space-y-0 border border-gray-300 rounded-lg p-8 bg-gray-100 shadow-lg"
-        >
-          <div className="flex-shrink-0 w-full md:w-64 h-40 flex items-center justify-center relative">
-            <Image
-              src={project.image}
-              alt={project.title}
-              className="rounded-lg object-contain"
-              fill
-            />
-          </div>
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-5xl font-light mb-4 montserrat">Project Portfolio</h1>
+        <p className="text-lg font-mono mb-16">What I've been up to recently</p>
 
-          <div className="flex-1 space-y-4">
-            <h2 className="text-2xl font-semibold">{project.title}</h2>
-            <p className="text-sm text-gray-500">{project.date}</p>
-            <p className="text-md">{project.description}</p>
-            <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag, idx) => (
-                <span
-                  key={idx}
-                  className="px-3 py-1 bg-blue-600 text-white text-sm rounded-lg"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
+        <div className="space-y-24">
+          {projects.map((project, index) => (
+            <article key={index} className="grid grid-cols-1 md:grid-cols-[300px,1fr] gap-8">
+              <div className="relative h-[200px] bg-gray-50">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  className="object-contain"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 300px"
+                />
+              </div>
+              <div className="space-y-4">
+                <h2 className="text-2xl font-light montserrat">{project.title}</h2>
+                <div className="flex items-center gap-4 text-gray-500 font-mono">
+                  <span>{project.date}</span>
+                </div>
+                <p className="font-mono leading-relaxed">{project.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, idx) => (
+                    <span key={idx} className="font-mono text-gray-500">
+                      {tag}
+                      {idx !== project.tags.length - 1 && <span className="ml-2">,</span>}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
-        ))}
       </div>
     </div>
   );
 }
+

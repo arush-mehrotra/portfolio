@@ -1,12 +1,30 @@
 'use client';
+
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import React from 'react';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const navigation = [
   { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
-  { name: "Resume", href: "/resume.pdf" },
+];
+
+const socialLinks = [
+  { 
+    icon: Github, 
+    href: "https://github.com/arush-mehrotra", 
+    label: "GitHub Profile" 
+  },
+  { 
+    icon: Linkedin, 
+    href: "https://linkedin.com/in/arush-mehrotra", 
+    label: "LinkedIn Profile" 
+  },
+  { 
+    icon: Twitter, 
+    href: "https://twitter.com/mehrotraarush", 
+    label: "X (Twitter) Profile" 
+  },
 ];
 
 const descriptionText = `
@@ -17,25 +35,32 @@ const descriptionText = `
   intern on their Data & Machine Learning team.
 `;
 
+const topics = [
+  "machine learning",
+  "social justice",
+  "technology",
+  "education",
+  "computer science",
+  "robotics",
+  "artificial intelligence",
+];
+
 const Navigation = React.memo(() => (
-  <nav className="flex flex-wrap items-center justify-between mb-8">
-    <Link href="/" className="text-lg underline mb-2 md:mb-0">
+  <nav className="flex items-center justify-between mb-16">
+    <Link href="/" className="text-3xl font-light tracking-tight hover:text-gray-600 transition-colors montserrat">
       Arush Mehrotra
     </Link>
-    <ul className="flex flex-wrap items-center space-x-6">
+    <div className="flex items-center gap-6">
       {navigation.map((item) => (
-        <li key={item.name}>
-          <Link
-            href={item.href}
-            className="text-lg text-gray-700 hover:text-black underline transition duration-300"
-            target={item.name === "Resume" ? "_blank" : undefined}
-            rel={item.name === "Resume" ? "noopener noreferrer" : undefined}
-          >
-            {item.name}
-          </Link>
-        </li>
+        <Link
+          key={item.name}
+          href={item.href}
+          className="text-lg font-light hover:text-gray-600 transition-colors montserrat"
+        >
+          {item.name}
+        </Link>
       ))}
-    </ul>
+    </div>
   </nav>
 ));
 Navigation.displayName = "Navigation";
@@ -47,29 +72,61 @@ export default function Home() {
     setIsHydrated(true);
   }, []);
 
-  useEffect(() => {
-    if (!isHydrated) return;
-  }, [isHydrated]);
-
   return (
-    <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-8">
+    <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-8 transition-colors">
       <Navigation />
 
-      <div className="w-7/8 sm:w-1/2 space-y-6">
-	  	<h1 className="relative text-lg w-[max-content] font-semibold before:absolute before:inset-0 before:bg-white before:animate-typewriter">
-			Hello, I am Arush!
-		</h1>
-		<p className="text-md break-words">
-			{descriptionText}
-		</p>
-        <p className="mt-4">
-          <a
-            href="mailto:arushm@seas.upenn.edu"
-            className="text-blue-500 hover:underline"
-          >
-            arushm@seas.upenn.edu
-          </a>
-        </p>
+      <div className="space-y-16 max-w-3xl mx-auto">
+        <section>
+          <article className="space-y-2">
+            <h3 className="text-4xl font-light tracking-tight montserrat">
+                Building human-centered technology
+            </h3>
+            <p className="text-base font-light leading-relaxed text-gray-600 font-mono">{descriptionText}</p>
+          </article>
+        </section>
+
+        <section>
+          <h2 className="text-base uppercase tracking-wide font-light mb-8 montserrat">Topics</h2>
+          <div className="flex flex-wrap gap-3">
+            {topics.map((topic) => (
+              <Link
+                key={topic}
+                href={`/topics/${topic.replace(' ', '-')}`}
+                className="text-base font-light hover:text-gray-600 transition-colors font-mono"
+              >
+                {topic}
+                {topic !== topics[topics.length - 1] && <span className="ml-3">,</span>}
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-base uppercase tracking-wide font-light mb-8 montserrat">Contact</h2>
+          <div className="space-y-4">
+            <a
+              href="mailto:arushm@seas.upenn.edu"
+              className="text-base font-light hover:text-gray-600 transition-colors font-mono block"
+            >
+              arushm@seas.upenn.edu
+            </a>
+            <div className="flex gap-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-black transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

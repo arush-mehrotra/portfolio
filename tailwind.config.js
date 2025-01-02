@@ -6,9 +6,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Montserrat', 'sans-serif'], 
-      },
       animation: {
         typewriter: "typewriter 1s steps(18) forwards"
       },
