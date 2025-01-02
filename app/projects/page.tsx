@@ -7,11 +7,11 @@ import FIFA from '../../images/fifa.jpeg';
 import AIRBNB from '../../images/airbnb.png';
 import LINUX from '../../images/linux.png';
 import PFJ from '../../images/pfj.png';
-import CC from '../../images/cc.png';
+import CC from '../../images/CC.png';
 import NUMBERLINK from '../../images/numberlink.png';
 
 const navigation = [
-  { name: "Project", href: "/projects" },
+  { name: "Projects", href: "/projects" },
 ];
 
 const projects = [
