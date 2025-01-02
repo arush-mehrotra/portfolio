@@ -109,14 +109,13 @@ export default function Home() {
           <h2 className="text-base uppercase tracking-wide font-light mb-8 inter">Topics</h2>
           <div className="flex flex-wrap gap-3">
             {topics.map((topic) => (
-              <Link
+              <p
                 key={topic}
-                href={`/topics/${topic.replace(' ', '-')}`}
                 className="text-base font-light hover:text-gray-600 transition-colors font-mono"
               >
                 {topic}
                 {topic !== topics[topics.length - 1] && <span className="ml-3">,</span>}
-              </Link>
+              </p>
             ))}
           </div>
         </section>
