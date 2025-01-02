@@ -56,10 +56,10 @@ export default function Home() {
       <Navigation />
 
       <div className="w-7/8 sm:w-1/2 space-y-6">
-	  	<h1 className="relative w-[max-content] font-semibold before:absolute before:inset-0 before:bg-white before:animate-typewriter">
+	  	<h1 className="relative text-lg w-[max-content] font-semibold before:absolute before:inset-0 before:bg-white before:animate-typewriter">
 			Hello, I am Arush!
 		</h1>
-		<p className="text-sm break-words">
+		<p className="text-md break-words">
 			{descriptionText}
 		</p>
         <p className="mt-4">

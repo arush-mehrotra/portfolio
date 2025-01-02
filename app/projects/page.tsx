@@ -81,34 +81,34 @@ export default function Projects() {
       <div className="w-7/8 space-y-16">
         {projects.map((project, index) => (
           <div
-            key={index}
-            className="flex flex-col md:flex-row items-center md:items-start md:space-x-8 space-y-8 md:space-y-0 border border-gray-300 rounded-lg p-8 bg-gray-100 shadow-lg"
-          >
-            <div className="flex-shrink-0 w-full md:w-64 h-40 relative">
-              <Image
-                src={project.image}
-                alt={project.title}
-                className="rounded-lg object-contain"
-                fill
-              />
-            </div>
+          key={index}
+          className="flex flex-col md:flex-row items-center md:space-x-8 space-y-8 md:space-y-0 border border-gray-300 rounded-lg p-8 bg-gray-100 shadow-lg"
+        >
+          <div className="flex-shrink-0 w-full md:w-64 h-40 flex items-center justify-center relative">
+            <Image
+              src={project.image}
+              alt={project.title}
+              className="rounded-lg object-contain"
+              fill
+            />
+          </div>
 
-            <div className="flex-1 space-y-4">
-              <h2 className="text-2xl font-semibold">{project.title}</h2>
-              <p className="text-sm text-gray-500">{project.date}</p>
-              <p className="text-md">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1 bg-blue-600 text-white text-sm rounded-lg"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+          <div className="flex-1 space-y-4">
+            <h2 className="text-2xl font-semibold">{project.title}</h2>
+            <p className="text-sm text-gray-500">{project.date}</p>
+            <p className="text-md">{project.description}</p>
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className="px-3 py-1 bg-blue-600 text-white text-sm rounded-lg"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
+        </div>
         ))}
       </div>
     </div>
