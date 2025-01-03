@@ -13,7 +13,7 @@ import image8 from '../../images/image8.jpg';
 
 const navigation = [
     { name: "Projects", href: "/projects" },
-    { name: "Photos", href: "/Photos"},
+    { name: "Photos", href: "/photos"},
   ];  
 
 export default function Photos() {
