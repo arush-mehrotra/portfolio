@@ -19,11 +19,11 @@ const navigation = [
 export default function Gallery() {
     return (
       <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-8">
-        <nav className="flex items-center justify-between mb-16">
-          <Link href="/" className="text-3xl font-light tracking-tight hover:text-gray-600 transition-colors inter">
+        <nav className="flex items-end justify-between mb-16">
+          <Link href="/" className="text-2xl font-light tracking-tight hover:text-gray-600 transition-colors inter">
             Arush Mehrotra
           </Link>
-          <div className="flex items-center gap-6">
+          <div className="flex items-end gap-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
