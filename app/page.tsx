@@ -10,6 +10,7 @@ import fidelity from '../images/fidelity.jpeg';
 import fletch from '../images/fletch.jpeg';
 import viam from '../images/viam.jpeg';
 import penn from '../images/penn.jpeg';
+import trueventures from '../images/trueventures.jpeg';
 
 const navigation = [
   { name: "Projects", href: "/projects" },
@@ -70,6 +71,14 @@ const workExperience = [
 	  description: "Enhanced a React-based UX for 100+ trial clients, increasing engagement. Built Jest testing frameworks for code quality. Created and optimized Go API endpoints for efficient data retrieval and updates.",
     logo: fletch
 	},
+  {
+    company: "True Ventures",
+    position: "2023 Cohort Fellow",
+    type: "Fellowship",
+    date: "June 2023 - Aug 2023",
+    description: "One of 15 fellows selected. Worked with True Ventures portfolio company (Fletch AI) as a software engineer. Conducted market research on AI trends to present to partners and investors.",
+    logo: trueventures
+  }
 	{
 	  company: "Fidelity Investments",
 	  position: "Full-Stack Software Engineer",
@@ -173,7 +182,6 @@ export default function Home() {
               <div key={index} className="space-y-2">
                 <div className="flex flex-col md:flex-row justify-between md:items-start">
                   <div>
-                    {/* Adjust flex for mobile */}
                     <div className="flex items-center space-x-3">
                       <Image
                         src={work.logo}
