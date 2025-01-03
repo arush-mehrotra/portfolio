@@ -201,7 +201,7 @@ export default function Home() {
                   </div>
                   <p className="text-gray-500 font-mono mt-2 md:mt-0">{work.date}</p>
                 </div>
-                <p className="font-mono text-gray-600 leading-relaxed">{work.description}</p>
+                {/* <p className="font-mono text-gray-600 leading-relaxed">{work.description}</p> */}
               </div>
             ))}
           </div>
