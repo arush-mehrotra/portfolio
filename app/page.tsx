@@ -146,7 +146,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-8 transition-colors">
+    <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-12 transition-colors">
       <Navigation />
 
       <div className="space-y-16 max-w-4xl mx-auto">

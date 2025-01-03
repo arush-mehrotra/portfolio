@@ -18,7 +18,7 @@ const navigation = [
 
 export default function Photos() {
     return (
-      <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-8">
+      <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-12">
         <nav className="flex items-end justify-between mb-16">
           <Link href="/" className="text-2xl font-light tracking-tight hover:text-gray-600 transition-colors inter">
             Arush Mehrotra
