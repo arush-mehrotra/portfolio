@@ -6,10 +6,10 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 import { TypewriterEffectSmooth } from "./components/ui/typewriter-effect";
-import fidelity from './images/fidelity.jpeg';
-import fletch from './images/fletch.jpeg';
-import viam from './images/viam.jpeg';
-import penn from './images/penn.jpeg';
+import fidelity from '../images/fidelity.jpeg';
+import fletch from '../images/fletch.jpeg';
+import viam from '../images/viam.jpeg';
+import penn from '../images/penn.jpeg';
 
 const navigation = [
   { name: "Projects", href: "/projects" },
