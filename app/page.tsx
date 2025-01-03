@@ -69,6 +69,13 @@ const workExperience = [
 	  date: "June 2022 - Aug 2022",
 	  description: "Built CI/CD pipelines with Jenkins and Docker, enabling test automation for 250+ engineers. Developed dashboards with Node.js and Angular to log and analyze DevOps workflows. Automated tests using Selenium and Java.",
 	},
+	{
+		company: "Penn Engineering",
+		position: "Teaching Assistant | CIS 5450 (Big Data Analytics) | CIS 1200 (Programming Languages and Techniques)",
+		type: "Part-Time",
+		date: "Sep 2022 - Present",
+		description: "Lead weekly recitations, grade assignments, and hold office hours for 50+ students. Create and grade exams, quizzes, and projects. Mentor students in Python, Java, and SQL.",
+	}
   ];  
 
 const descriptionText = `
