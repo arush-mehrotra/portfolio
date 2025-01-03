@@ -78,7 +78,7 @@ const workExperience = [
     date: "June 2023 - Aug 2023",
     description: "One of 15 fellows selected. Worked with True Ventures portfolio company (Fletch AI) as a software engineer. Conducted market research on AI trends to present to partners and investors.",
     logo: trueventures
-  }
+  },
 	{
 	  company: "Fidelity Investments",
 	  position: "Full-Stack Software Engineer",
