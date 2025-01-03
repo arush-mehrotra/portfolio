@@ -2,14 +2,14 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import image1 from '../../images/image1.jpg';
-import image2 from '../../images/image2.jpg';
-import image3 from '../../images/image3.jpg';
-import image4 from '../../images/image4.jpg';
-import image5 from '../../images/image5.jpg';
-import image6 from '../../images/image6.jpg';
-import image7 from '../../images/image7.jpg';
-import image8 from '../../images/image8.jpg';
+import image1 from '../../images/photogallery/image1.jpg';
+import image2 from '../../images/photogallery/image2.jpg';
+import image3 from '../../images/photogallery/image3.jpg';
+import image4 from '../../images/photogallery/image4.jpg';
+import image5 from '../../images/photogallery/image5.jpg';
+import image6 from '../../images/photogallery/image6.jpg';
+import image7 from '../../images/photogallery/image7.jpg';
+import image8 from '../../images/photogallery/image8.jpg';
 
 const navigation = [
     { name: "Projects", href: "/projects" },

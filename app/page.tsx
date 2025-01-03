@@ -1,10 +1,15 @@
 'use client';
 
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 import { TypewriterEffectSmooth } from "./components/ui/typewriter-effect";
+import fidelity from './images/fidelity.jpeg';
+import fletch from './images/fletch.jpeg';
+import viam from './images/viam.jpeg';
+import penn from './images/penn.jpeg';
 
 const navigation = [
   { name: "Projects", href: "/projects" },
@@ -55,6 +60,7 @@ const workExperience = [
 	  type: "Internship",
 	  date: "May 2024 - Aug 2024",
 	  description: "Developed a new data collection paradigm linking ML model outputs with edge device captures using Go, Svelte, and Python. Led a cloud migration of 70M customer files from Amazon S3 to Azure Append Blob, boosting query performance 10x.",
+    logo: viam
 	},
 	{
 	  company: "Fletch AI",
@@ -62,6 +68,7 @@ const workExperience = [
 	  type: "Internship",
 	  date: "June 2023 - Aug 2023",
 	  description: "Enhanced a React-based UX for 100+ trial clients, increasing engagement. Built Jest testing frameworks for code quality. Created and optimized Go API endpoints for efficient data retrieval and updates.",
+    logo: fletch
 	},
 	{
 	  company: "Fidelity Investments",
@@ -69,6 +76,7 @@ const workExperience = [
 	  type: "Internship",
 	  date: "June 2022 - Aug 2022",
 	  description: "Built CI/CD pipelines with Jenkins and Docker, enabling test automation for 250+ engineers. Developed dashboards with Node.js and Angular to log and analyze DevOps workflows. Automated tests using Selenium and Java.",
+    logo: fidelity
 	},
 	{
 		company: "Penn Engineering",
@@ -76,6 +84,7 @@ const workExperience = [
 		type: "Part-Time",
 		date: "Sep 2022 - Present",
 		description: "TA for CIS 5450 (Big Data Analytics) and CIS 1200 (Programming Languages & Techniques). Lead weekly recitations, grade assignments, and hold office hours for 50+ students. Create and grade exams, quizzes, and projects. Mentor students in Python, Java, and SQL.",
+    logo: penn
 	}
   ];  
 
@@ -157,30 +166,37 @@ export default function Home() {
           </article>
         </section>
 
-		<section>
-			<h2 className="text-xl uppercase tracking-wide font-light mb-8 inter">Work Experience</h2>
-			<div className="space-y-12">
-				{workExperience.map((work, index) => (
-				<div key={index} className="space-y-2">
-					<div className="flex flex-col md:flex-row justify-between md:items-start">
-					<div>
-						<div className="flex flex-col md:flex-row md:items-center md:space-x-3">
-						<h3 className="text-xl font-light inter">{work.company}</h3>
-						{work.type && (
-							<span className="inline-block w-fit px-2 py-1 text-sm bg-gray-100 rounded-md font-mono mt-1 md:mt-0">
-							{work.type}
-							</span>
-						)}
-						</div>
-						<p className="text-base font-light inter mt-1">{work.position}</p>
-					</div>
-					<p className="text-gray-500 font-mono mt-2 md:mt-0">{work.date}</p>
-					</div>
-					<p className="font-mono text-gray-600 leading-relaxed">{work.description}</p>
-				</div>
-				))}
-			</div>
-		</section>
+        <section>
+          <h2 className="text-xl uppercase tracking-wide font-light mb-8 inter">Work Experience</h2>
+          <div className="space-y-12">
+              {workExperience.map((work, index) => (
+                  <div key={index} className="space-y-2">
+                      <div className="flex flex-col md:flex-row justify-between md:items-start">
+                          <div>
+                              <div className="flex flex-col md:flex-row md:items-center md:space-x-3">
+                                      <Image
+                                          src={work.logo}
+                                          alt={`${work.company} logo`}
+                                          width={32}
+                                          height={32}
+                                          className="object-contain"
+                                      />
+                                  <h3 className="text-xl font-light inter">{work.company}</h3>
+                                  {work.type && (
+                                      <span className="inline-block w-fit px-2 py-1 text-sm bg-gray-100 rounded-md font-mono mt-1 md:mt-0">
+                                          {work.type}
+                                      </span>
+                                  )}
+                              </div>
+                              <p className="text-base font-light inter mt-1">{work.position}</p>
+                          </div>
+                          <p className="text-gray-500 font-mono mt-2 md:mt-0">{work.date}</p>
+                      </div>
+                      <p className="font-mono text-gray-600 leading-relaxed">{work.description}</p>
+                  </div>
+              ))}
+          </div>
+        </section>
 
 
         <section>
