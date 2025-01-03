@@ -12,7 +12,8 @@ import NUMBERLINK from '../../images/numberlink.png';
 
 const navigation = [
   { name: "Projects", href: "/projects" },
-];
+  { name: "Photos", href: "/Photos"},
+]; 
 
 const projects = [
   {

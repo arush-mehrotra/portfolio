@@ -13,10 +13,10 @@ import image8 from '../../images/image8.jpg';
 
 const navigation = [
     { name: "Projects", href: "/projects" },
-    { name: "Gallery", href: "/gallery"},
+    { name: "Photos", href: "/Photos"},
   ];  
 
-export default function Gallery() {
+export default function Photos() {
     return (
       <div className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-16 py-8">
         <nav className="flex items-end justify-between mb-16">

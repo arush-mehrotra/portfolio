@@ -8,7 +8,7 @@ import { TypewriterEffectSmooth } from "./components/ui/typewriter-effect";
 
 const navigation = [
   { name: "Projects", href: "/projects" },
-  { name: "Gallery", href: "/gallery" }
+  { name: "Photos", href: "/Photos" }
 ];
 
 const socialLinks = [
