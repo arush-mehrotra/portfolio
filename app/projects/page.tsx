@@ -98,29 +98,31 @@ export default function Projects() {
 
         <div className="space-y-24">
           {projects.map((project, index) => (
-            <article key={index} className="grid grid-cols-1 md:grid-cols-[300px,1fr] gap-8">
-              <div className="relative h-[200px] bg-gray-50">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  className="object-contain"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 300px"
-                />
-              </div>
-              <div className="space-y-4">
-                <h2 className="text-2xl font-light inter">{project.title}</h2>
-                <div className="flex items-center gap-4 text-gray-500 font-mono">
-                  <span>{project.date}</span>
+            <article key={index} className="border border-gray-300 rounded-lg p-4 shadow-sm">
+              <div className="grid grid-cols-1 md:grid-cols-[300px,1fr] gap-8">
+                <div className="relative h-[200px] bg-gray-50">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    className="object-contain"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 300px"
+                  />
                 </div>
-                <p className="font-mono leading-relaxed">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, idx) => (
-                    <span key={idx} className="font-mono text-gray-500">
-                      {tag}
-                      {idx !== project.tags.length - 1 && <span className="ml-2">,</span>}
-                    </span>
-                  ))}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-light inter">{project.title}</h2>
+                  <div className="flex items-center gap-4 text-gray-500 font-mono">
+                    <span>{project.date}</span>
+                  </div>
+                  <p className="font-mono leading-relaxed">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, idx) => (
+                      <span key={idx} className="font-mono text-gray-500">
+                        {tag}
+                        {idx !== project.tags.length - 1 && <span className="ml-2">,</span>}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </article>
@@ -130,4 +132,3 @@ export default function Projects() {
     </div>
   );
 }
-
