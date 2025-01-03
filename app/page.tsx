@@ -89,7 +89,7 @@ const workExperience = [
 	},
 	{
 		company: "Penn Engineering",
-		position: "Teaching Assistant",
+		position: "Teaching Assistant (Big Data Analytics & Programming Languages)",
 		type: "Part-Time",
 		date: "Sep 2022 - Present",
 		description: "TA for CIS 5450 (Big Data Analytics) and CIS 1200 (Programming Languages & Techniques). Lead weekly recitations, grade assignments, and hold office hours for 50+ students. Create and grade exams, quizzes, and projects. Mentor students in Python, Java, and SQL.",
