@@ -169,34 +169,36 @@ export default function Home() {
         <section>
           <h2 className="text-xl uppercase tracking-wide font-light mb-8 inter">Work Experience</h2>
           <div className="space-y-12">
-              {workExperience.map((work, index) => (
-                  <div key={index} className="space-y-2">
-                      <div className="flex flex-col md:flex-row justify-between md:items-start">
-                          <div>
-                              <div className="flex flex-col md:flex-row md:items-center md:space-x-3">
-                                      <Image
-                                          src={work.logo}
-                                          alt={`${work.company} logo`}
-                                          width={32}
-                                          height={32}
-                                          className="object-contain"
-                                      />
-                                  <h3 className="text-xl font-light inter">{work.company}</h3>
-                                  {work.type && (
-                                      <span className="inline-block w-fit px-2 py-1 text-sm bg-gray-100 rounded-md font-mono mt-1 md:mt-0">
-                                          {work.type}
-                                      </span>
-                                  )}
-                              </div>
-                              <p className="text-base font-light inter mt-1">{work.position}</p>
-                          </div>
-                          <p className="text-gray-500 font-mono mt-2 md:mt-0">{work.date}</p>
-                      </div>
-                      <p className="font-mono text-gray-600 leading-relaxed">{work.description}</p>
+            {workExperience.map((work, index) => (
+              <div key={index} className="space-y-2">
+                <div className="flex flex-col md:flex-row justify-between md:items-start">
+                  <div>
+                    {/* Adjust flex for mobile */}
+                    <div className="flex items-center space-x-3">
+                      <Image
+                        src={work.logo}
+                        alt={`${work.company} logo`}
+                        width={32}
+                        height={32}
+                        className="object-contain"
+                      />
+                      <h3 className="text-xl font-light inter">{work.company}</h3>
+                      {work.type && (
+                        <span className="inline-block w-fit px-2 py-1 text-sm bg-gray-100 rounded-md font-mono">
+                          {work.type}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-base font-light inter mt-1">{work.position}</p>
                   </div>
-              ))}
+                  <p className="text-gray-500 font-mono mt-2 md:mt-0">{work.date}</p>
+                </div>
+                <p className="font-mono text-gray-600 leading-relaxed">{work.description}</p>
+              </div>
+            ))}
           </div>
         </section>
+
 
 
         <section>
