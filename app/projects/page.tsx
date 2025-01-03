@@ -96,7 +96,7 @@ export default function Projects() {
         <h1 className="text-4xl mb-4 inter">Project Portfolio</h1>
         <p className="text-lg font-mono mb-16">What I&apos;ve been up to recently</p>
 
-        <div className="space-y-24">
+        <div className="space-y-16">
           {projects.map((project, index) => (
             <article key={index} className="border border-gray-300 rounded-lg p-4 shadow-sm">
               <div className="grid grid-cols-1 md:grid-cols-[300px,1fr] gap-8">
