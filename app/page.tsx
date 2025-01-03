@@ -80,13 +80,11 @@ const descriptionText = `
 `;
 
 const topics = [
-  "machine learning",
-  "social justice",
-  "technology",
-  "education",
   "computer science",
-  "robotics",
+  "machine learning",
   "artificial intelligence",
+  "web development",
+  "robotics",
 ];
 
 const Navigation = React.memo(() => (
@@ -133,19 +131,19 @@ export default function Home() {
 			<div className="space-y-12">
 				{workExperience.map((work, index) => (
 				<div key={index} className="space-y-2">
-					<div className="flex justify-between items-start">
+					<div className="flex flex-col md:flex-row justify-between md:items-start">
 					<div>
-						<div className="flex items-center space-x-3">
+						<div className="flex flex-col md:flex-row md:items-center md:space-x-3">
 						<h3 className="text-xl font-light inter">{work.company}</h3>
 						{work.type && (
-							<span className="inline-block px-2 py-1 text-sm bg-gray-100 rounded-md font-mono">
+							<span className="inline-block w-fit px-2 py-1 text-sm bg-gray-100 rounded-md font-mono mt-1 md:mt-0">
 							{work.type}
 							</span>
 						)}
 						</div>
 						<p className="text-base font-light inter mt-1">{work.position}</p>
 					</div>
-					<p className="text-gray-500 font-mono">{work.date}</p>
+					<p className="text-gray-500 font-mono mt-2 md:mt-0">{work.date}</p>
 					</div>
 					<p className="font-mono text-gray-600 leading-relaxed">{work.description}</p>
 				</div>
