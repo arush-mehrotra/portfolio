@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'], // Include the weights you want
+  weight: ['400', '500', '600', '700'],
 })
 
 export const metadata = {

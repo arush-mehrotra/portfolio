@@ -86,10 +86,33 @@ const descriptionText = `
   intern on their Data & Machine Learning team.
 `;
 
+const articles = [
+	{
+		name: "LA Times",
+		href: "https://www.latimes.com/socal/daily-pilot/entertainment/story/2020-09-16/student-led-nonprofit-o-c-justice-project-expands-beyond-irvine"
+	},
+	{
+		name: "OC Register",
+		href: "https://www.ocregister.com/2021/02/03/high-school-students-nonprofit-seeks-social-justice-reforms/"
+	},
+	{
+		name: "Orange Coast Magazine (21 Gen Z Locals to Watch)",
+		href: "https://orangecoast.com/news/21-gen-z-locals-to-watch"
+	},
+	{
+		name: "Google Scholar",
+		href: "https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AFix5Mbihes3R5Vt7bXiZhbAFPWgXRTCSk2Wj8qyrEjbF4LJWSWAbeBWzIJLU00QxJ1sHMI0EE-qRNL6MA7o3w&user=kzyzLqoAAAAJ"
+	}
+]
+
 const topics = [
   "computer science",
   "machine learning",
   "artificial intelligence",
+  "fairness",
+  "ethical algorithms",
+  "computer architecture",
+  "distributed systems",
   "web development",
   "robotics",
 ];
@@ -160,7 +183,7 @@ export default function Home() {
 
 
         <section>
-          <h2 className="text-xl uppercase tracking-wide font-light mb-8 inter">Topics</h2>
+          <h2 className="text-xl uppercase tracking-wide font-light mb-8 inter">Interests</h2>
           <div className="flex flex-wrap gap-3">
             {topics.map((topic) => (
               <p
@@ -173,6 +196,22 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+		<section>
+			<h2 className="text-xl uppercase tracking-wide font-light mb-8 inter">Press</h2>
+			<div className="flex flex-wrap gap-3">
+				{articles.map((press) => (
+				<Link
+					key={press.name}
+					href={press.href}
+					className="text-base font-light text-blue-600 underline hover:text-blue-800 transition-colors font-mono"
+				>
+					{press.name}
+					{press !== articles[articles.length - 1] && <span className="ml-3"></span>}
+				</Link>
+				))}
+			</div>
+		</section>
 
         <section>
           <h2 className="text-xl uppercase tracking-wide font-light mb-8 inter">Contact</h2>
