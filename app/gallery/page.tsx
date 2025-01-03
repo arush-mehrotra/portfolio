@@ -39,7 +39,7 @@ export default function Gallery() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="grid gap-4">
                 <div>
-                    <Image className="h-auto max-w-full rounded-lg" src={image1} alt="" />
+                    <Image className="h-auto max-w-full rounded-lg" src={image4} alt="" />
                 </div>
                 <div>
                     <Image className="h-auto max-w-full rounded-lg" src={image5} alt="" />
@@ -66,7 +66,7 @@ export default function Gallery() {
                     <Image className="h-auto max-w-full rounded-lg" src={image8} alt="" />
                 </div>
                 <div>
-                    <Image className="h-auto max-w-full rounded-lg" src={image4} alt="" />
+                    <Image className="h-auto max-w-full rounded-lg" src={image1} alt="" />
                 </div>
             </div>
         </div>
